@@ -3,7 +3,7 @@ import argparse
 from parse import *
 
 parser = argparse.ArgumentParser("Interpret a WhileProc source code")
-parser.add_argument("filename", metavar='f', help="Source File of the WhileProc (*.while)")
+parser.add_argument("filename", metavar='f', help="Source File name of the WhileProc code (*.while)")
 
 args = parser.parse_args()
 with open(args.filename, "r") as source_file:
