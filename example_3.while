@@ -1,0 +1,15 @@
+
+
+
+proc fact(fact,m) {
+  // we pass fact to itself as otherwise fact is not closed over its own binding, fact -> proc...
+  if m < 2 {
+    1
+  }/***/else/**/{
+    m1:=m-1;
+    m * fact(fact,m1); /*<-- this extra semi-colon makes this program syntactically malformed */
+  }
+};
+/* comment
+*/print ((fact(fact,5)))
+/* this unclosed comment is an error as well

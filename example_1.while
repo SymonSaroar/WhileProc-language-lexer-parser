@@ -1,0 +1,23 @@
+
+proc fib(n)
+{
+    i := 1;
+    a := 1;
+    b := 0;
+    while i < n {
+      i := i + 1;
+      a := a + b;
+      b := a - b
+    };
+    a
+};
+
+a := 20;
+print fib(a);   /* Prints 20th Fibonacci term */
+print fib(11);  /* Prints 11th Fibonacci term */
+
+proc f(n) { 1+n+1 };
+q := 2;
+m := 1;
+print f(m);  /* runs function f(1) */
+print f(q)   /* runs function f(2) */

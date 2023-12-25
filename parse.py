@@ -56,6 +56,8 @@ def parse(tokens):
             return ErrorMessage(f"Expected a '{s}'")
 
     def parse_p():
+        if not tokens:
+            return ErrorMessage(f"Error: Empty Source Code")
         s = parse_s()
         if isinstance(s, ErrorMessage):
             return s
@@ -279,7 +281,7 @@ def parse(tokens):
             expect(peek(0))
             return n
         else:
-            return ErrorMessage(f"syntax Error after {peek(0)}. Expected a '(' or an identifier or a number")
+            return ErrorMessage(f"syntax Error")
 
     def parse_r():
         ret = []

@@ -302,7 +302,7 @@ class ErrorMessage(Node):
         self.s = s
 
     def interpret(self, env, out):
-        print(self.s)
+        # print(self.s)
         return 0, env, out + self.s + "\n"
 
     def __str__(self):
