@@ -45,4 +45,4 @@ This Code shows a recursive funtion with all supported comment formats
 ```bash
 python run_while_code example_3.while
 ```
-This Code shows a sytax error case which returns a syntax error message upon running
+This Code shows a syntax error case which returns a syntax error message upon running
